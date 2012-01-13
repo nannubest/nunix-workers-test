@@ -1,0 +1,35 @@
+<!DOCTYPE html> <!-- HTML5 Definition -->
+<html>
+<head>
+  <title>Add Here a Title</title>
+  <meta charset="utf8" /> <!-- Set encoding to UTF-8. -->
+  <script type="text/javascript">
+  var worker = new Worker("loader.js");
+  worker.onmessage = function(e) {
+	switch(e.data.func){
+	  case "pi":
+		var pi = document.getElementById('pi');
+		pi.innerHTML = e.data.data;
+	  break;
+	  case "estado":
+		var estado = document.getElementById('estado');
+		estado.innerHTML = e.data.data;
+	  break;
+	}
+  };
+  worker.onerror = function(e) {
+    alert("Error in file: "+e.filename+"\nline: "+e.lineno+"\nDescription: "+e.message);
+  };
+  worker.postMessage("start");
+  </script>
+</head>
+<body>
+<h1>Hola.</h1>
+<p>Nota: El script tardará 1 segundo en iniciarse. Suele tardar unos segundos hasta que se procesen 10.000 dígitos de Pi :)</p>
+<p>Estado: <span id="estado">Aún no iniciado.</span></p>
+<textarea style="width: 960px; height: 300px; overflow:scroll; border: 1px solid #CCC;"  id="pi"></textarea>
+
+
+
+</body>
+</html>
