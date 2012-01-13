@@ -11,9 +11,9 @@
 		var pi = document.getElementById('pi');
 		pi.innerHTML = e.data.data;
 	  break;
-	  case "estado":
-		var estado = document.getElementById('estado');
-		estado.innerHTML = e.data.data;
+	  case "status":
+		var status = document.getElementById('status');
+		status.innerHTML = e.data.data;
 	  break;
 	}
   };
@@ -26,7 +26,7 @@
 <body>
 <h1>Hi.</h1>
 <p>Note: This script will take up to 1 second to start. It takes about 10 seconds to calculate 10,000 digits of Pi :)</p>
-<p>Status: <span id="estado">Not started yet.</span></p>
+<p>Status: <span id="status">Not started yet.</span></p>
 <textarea style="width: 960px; height: 300px; overflow:scroll; border: 1px solid #CCC;"  id="pi"></textarea>
 
 

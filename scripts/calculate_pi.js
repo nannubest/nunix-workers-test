@@ -5,7 +5,7 @@ function pi(digit){
 	for(b=c;d+=(f[b]?f[b]:0)*a,f[b]=d%--g,d= p(d/g--),--b;d*=b);
 	return r
 }
-sleep(1*1000); // 1 seg
-postMessage({data: "Processing", func: 'estado'});
+sleep(1*1000); // 1 second
+postMessage({data: "Processing", func: 'status'});
 postMessage({data: pi(10000), func: 'pi'});
-postMessage({data: "Ready!", func: 'estado'});
+postMessage({data: "Ready!", func: 'status'});
