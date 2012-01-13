@@ -6,6 +6,6 @@ function pi(digit){
 	return r
 }
 sleep(1*1000); // 1 seg
-postMessage({data: "Procesando", func: 'estado'});
+postMessage({data: "Processing", func: 'estado'});
 postMessage({data: pi(10000), func: 'pi'});
-postMessage({data: "¡Listo!", func: 'estado'});
+postMessage({data: "Ready!", func: 'estado'});
