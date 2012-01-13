@@ -4,7 +4,7 @@ start = function() {
   var script, scripts, _i, _len;
   scripts = [
 	'libs.js',
-	'calculation.js'
+	'calculate_pi.js'
   ];
   for (_i = 0, _len = scripts.length; _i < _len; _i++) {
     script = scripts[_i];
